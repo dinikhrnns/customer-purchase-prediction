@@ -37,6 +37,12 @@ The dataset contains customer information used to predict whether a customer pur
 
 **Source:** Kaggle (`rakeshrau/social-network-ads`)
 
+### Customer Purchase Data
+
+<p align="center">
+  <img src="images/Customer_Purchase_Data.png" width="600">
+</p>
+
 ## 🧠 Modeling Approach
 
 ### Logistic Regression from Scratch
@@ -54,6 +60,23 @@ The first model implements:
 
 **Training Accuracy: 84.50%**
 
+### Cost Convergence
+
+<p align="center">
+  <img src="images/cost_history.png" width="550">
+</p>
+
+
+### Linear Decision Boundary
+
+<p align="center">
+  <img src="images/logistic_decision_boundary.png" width="550">
+</p>
+
+The baseline Logistic Regression model uses a **linear decision boundary** to separate Purchased and Not Purchased customers.
+
+---
+
 ### Regularized Logistic Regression
 
 The second model extends the baseline model using:
@@ -67,6 +90,22 @@ The original 2 features are transformed into **27 polynomial features**.
 
 **Training Accuracy: 90.75%**
 
+### Cost Convergence
+
+<p align="center">
+  <img src="images/cost_history_regularized.png" width="550">
+</p>
+
+### Non-linear Decision Boundary
+
+<p align="center">
+  <img src="images/regularized_decision_boundary.png" width="550">
+</p>
+
+Polynomial feature mapping allows the model to capture more complex, non-linear relationships between Age, Estimated Salary, and purchase behavior.
+
+---
+
 ## 📈 Model Performance
 
 | Metric | Logistic Regression | Regularized Logistic Regression |
@@ -75,6 +114,20 @@ The original 2 features are transformed into **27 polynomial features**.
 | Purchased Precision | 0.83 | 0.86 |
 | Purchased Recall | 0.71 | 0.88 |
 | Purchased F1-score | 0.77 | 0.87 |
+
+### Logistic Regression Confusion Matrix
+
+<p align="center">
+  <img src="images/confusion_matrix.png" width="550">
+</p>
+
+
+### Regularized Logistic Regression Confusion Matrix
+
+<p align="center">
+  <img src="images/confusion_matrix_reg.png" width="550">
+</p>
+
 
 The regularized model significantly improved **Purchased recall from 71% to 88%**, meaning the model was able to identify more customers who actually purchased the product.
 
